@@ -1,11 +1,10 @@
-package beakJoon;
+package beakJoon.IO_Calculation;
 
 import java.util.Scanner;
 
-public class Main {
+public class A_Plus_B {
 
 	public static void main(String[] args) {
-		
 		int A;
 		int B;
 		
