@@ -14,7 +14,7 @@ public class Main {
 		A = sc.nextInt();
 		B = sc.nextInt();
 		
-		System.out.println(A+B);
+		System.out.println(A*B);
 		
 	}
 
