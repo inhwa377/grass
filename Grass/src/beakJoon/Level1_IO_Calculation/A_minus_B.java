@@ -1,8 +1,8 @@
-package beakJoon.IO_Calculation;
+package beakJoon.Level1_IO_Calculation;
 
 import java.util.Scanner;
 
-public class A_multiply_B {
+public class A_minus_B {
 
 	public static void main(String[] args) {
 		int A;
@@ -13,7 +13,7 @@ public class A_multiply_B {
 		A = sc.nextInt();
 		B = sc.nextInt();
 		
-		System.out.println(A*B);
+		System.out.println(A-B);
 
 	}
 

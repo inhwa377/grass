@@ -1,6 +1,6 @@
-package beakJoon.IO_Calculation;
+package beakJoon.Level1_IO_Calculation;
 
-public class HelloWorld {
+public class helloWorld {
 
 	public static void main(String[] args) {
 		System.out.println("Hello World!");

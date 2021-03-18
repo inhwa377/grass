@@ -1,4 +1,4 @@
-package beakJoon.IO_Calculation;
+package beakJoon.Level1_IO_Calculation;
 
 import java.util.Scanner;
 

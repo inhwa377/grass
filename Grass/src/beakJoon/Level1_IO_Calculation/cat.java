@@ -1,6 +1,6 @@
-package beakJoon.IO_Calculation;
+package beakJoon.Level1_IO_Calculation;
 
-public class Cat {
+public class cat {
 	
 	public static void main(String[] args) {
 		System.out.println("\\    /\\");

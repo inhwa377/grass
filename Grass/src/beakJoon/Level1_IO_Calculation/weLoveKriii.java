@@ -1,6 +1,6 @@
-package beakJoon.IO_Calculation;
+package beakJoon.Level1_IO_Calculation;
 
-public class We_love_kriii {
+public class weLoveKriii {
 	public static void main(String[] args) {
 		String a = "강한친구 대한육군";
 		
