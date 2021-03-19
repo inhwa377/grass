@@ -1,36 +1,40 @@
 package beakJoon;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main {
 
 	public static void main(String[] args) {
-		int H;
-		int M;
-		int MM;
+		String star = "*";
+		int n;
 		
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		H = sc.nextInt();
-		M = sc.nextInt();
-		MM = M - 45;
-		
-		if((0 <= H && H <= 23) || (0 <= M && M <= 59)) {
-			if(MM < 0) {
-				H = H - 1;
-				M = MM + 60;
-				
-				if(H < 0) {
-					H += 24;
+		try {
+			
+			n = Integer.parseInt(br.readLine());
+			
+			for(int i=1; i<=n; i++) {
+				for(int j=n; j>i; j--) {
+					bw.write(" ");
 				}
-				
-				System.out.println(H);
-				System.out.println(M);
-				
-			} else if(MM >= 0) {
-				System.out.println(H);
-				System.out.println(MM);
+				for(int k=0; k<i; k++) {
+					bw.write(star);
+				}
+				bw.newLine();
 			}
+			
+			bw.flush();
+			bw.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("¿¡·¯ = " + e.getMessage());
 		}
 	}
+
 }
