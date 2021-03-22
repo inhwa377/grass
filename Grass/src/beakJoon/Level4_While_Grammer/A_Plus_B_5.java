@@ -1,34 +1,35 @@
-package beakJoon.Level3_For_Grammer;
+package beakJoon.Level4_While_Grammer;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
-public class less_than_X {
+public class A_Plus_B_5 {
 
 	public static void main(String[] args) {
-		String[] input = null;
-		int N; //수열A의 정수 갯수
-		int X;
-		String[] A = null;
+		String[] input;
+		String end1 = "0";
+		String end2 = "0";
+		int A;
+		int B;
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		try {
-			input = br.readLine().split(" ");
-			N = Integer.parseInt(input[0]);
-			X = Integer.parseInt(input[1]);
-			A = br.readLine().split(" "); 
 			
-			for(int i=0; i<N; i++) {
-				if(Integer.parseInt(A[i]) < X) {
-					bw.write(A[i]);
-					bw.write(" ");
+			while(true) {
+				input = br.readLine().split(" ");
+				A = Integer.parseInt(input[0]);
+				B = Integer.parseInt(input[1]);
+
+				if(input[0].equals(end1) && input[1].equals(end2)) {
+					break;
 				}
+				
+				bw.write(String.valueOf(A+B));
+				bw.newLine();
 			}
 			
 			bw.flush();
