@@ -4,37 +4,43 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Main {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
+		int[] arr = new int[9];
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		int N; //시작하는 숫자
-		int count = 0; //횟수 
-		int copy; //더한 새로운 숫자
-
 		try {
-			N = Integer.parseInt(br.readLine());
-			copy = N;
+			for(int i=0; i<arr.length; i++) {
+				arr[i] = Integer.parseInt(br.readLine());
+			}
 			
-			do {
-				N = ((N%10)*10) + ((N/10 + N%10)%10);
+			int max = 0; //최댓값
+			int index = 0; //최댓값의 n번째 번호
+			int count = 0; //최댓값의 번호를 세기위한 카운트
+			
+			for(int value:arr) {
 				count++;
-
-			} while (N != copy);
+				if(value > max) {
+					max = value;
+					index = count;
+				}
+			}
 			
-				bw.write(String.valueOf(count));
-				bw.flush();
-				bw.close();
-				
+			bw.write(String.valueOf(max));
+			bw.newLine();
+			bw.write(String.valueOf(index));
+			bw.flush();
+			bw.close();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("에러 = " + e.getMessage());
 		}
-
 	}
-
 }

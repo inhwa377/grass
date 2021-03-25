@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class min_max {
 
@@ -15,16 +16,20 @@ public class min_max {
 		
 		try {
 			int N = Integer.parseInt(br.readLine());
-			String S = br.readLine();
-			//int max = A[0];
-					
-			for(int i=1; i<N; i++) {
-				/*
-				 * if(A[i] > max) {
-				 * 
-				 * }
-				 */
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			
+			int index = 0;
+			int[] arr = new int[N];
+			
+			while(st.hasMoreTokens()) {
+				arr[index] = Integer.parseInt(st.nextToken());
+				index++;
 			}
+			
+			Arrays.sort(arr);
+			bw.write(arr[0] + " " + arr[N - 1]);
+			bw.flush();
+			bw.close();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
