@@ -4,43 +4,37 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
-import java.util.StringTokenizer;
 
 public class Main {
 
-	public static void main(String[] args) {
-		int[] arr = new int[9];
+public static void main(String[] args) {
+		
+		int[] arr = new int[10];
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		try {
-			for(int i=0; i<arr.length; i++) {
-				arr[i] = Integer.parseInt(br.readLine());
+
+			int mul = Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine());
+			
+			String str = String.valueOf(mul);
+			
+			for(int i=0; i<str.length(); i++) {
+				arr[(str.charAt(i) - 48)]++;
 			}
 			
-			int max = 0; //최댓값
-			int index = 0; //최댓값의 n번째 번호
-			int count = 0; //최댓값의 번호를 세기위한 카운트
-			
-			for(int value:arr) {
-				count++;
-				if(value > max) {
-					max = value;
-					index = count;
-				}
+			for(int j : arr) {
+				bw.write(String.valueOf(j));
+				bw.newLine();
+				bw.flush();
 			}
 			
-			bw.write(String.valueOf(max));
-			bw.newLine();
-			bw.write(String.valueOf(index));
-			bw.flush();
 			bw.close();
 			
-		} catch (Exception e) {
+		}catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("에러 = " + e.getMessage());
+			System.out.println(e.getMessage());
 		}
 	}
 }
