@@ -17,7 +17,7 @@ public class leftover {
 		try {
 			
 			for(int i=0; i<10; i++) {
-				num[Integer.parseInt(br.readLine()) % 42]++;
+				
 			}
 			
 		
